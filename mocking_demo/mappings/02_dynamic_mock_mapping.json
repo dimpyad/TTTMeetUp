@@ -1,0 +1,36 @@
+{
+    "mappings": [
+      {
+        "request": {
+          "method": "GET",
+          "urlPattern": "/api/search.*",
+          "queryParameters": {
+            "query": {
+              "matches": ".*"
+            }
+          }
+        },
+        "response": {
+          "transformers": ["response-template"],
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": "{ \"results\": [\"Result {{request.query.query}}\"] }"
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "url": "/api/user"
+        },
+        "response": {
+          "status": 200,
+          "bodyFileName": "fakeresponse.json", 
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      }
+      
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+    "request": {
+      "method": "POST",
+      "url": "/create-user",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$.id",
+          "matchesJsonPath": "$.name"
+        }
+      ]
+    },
+    "response": {
+      "status": 201,
+      "bodyFileName": "user_create_response.json" 
+    }
+  }

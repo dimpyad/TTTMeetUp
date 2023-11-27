@@ -1,0 +1,40 @@
+{
+  "mappings": [
+  {
+        "request": {
+          "method": "GET",
+          "urlPattern": "/products/[0-9]+",
+          "headers": {
+            "Authorization": {
+              "equalTo": "Bearer invalid_token"
+            }
+          }
+        },
+        "response": {
+          "status": 403,
+          "body": "Access Forbidden",
+          "headers": {
+            "Content-Type": "text/plain"
+          }
+        }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPattern": "/products/[0-9]+",
+      "headers": {
+        "Authorization": {
+          "equalTo": "Bearer valid_token"
+        }
+      }
+    },
+    "response": {
+      "status": 404,
+      "body": "Product not found",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    }
+} 
+]
+}

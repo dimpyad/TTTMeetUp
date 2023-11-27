@@ -1,0 +1,351 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MockDemo",
+    "dateExported": "2023-11-27T06:20:06.484Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "4d7cb900-f43e-48ed-8687-53c27cc9baff",
+            "name": "StaticMockTest",
+            "containerId": "",
+            "created": "2023-11-16T11:42:52.566Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "1d35bbfe-97ee-4c2f-873f-808fcf70d191",
+            "name": "DynamicMockTest",
+            "containerId": "",
+            "created": "2023-11-16T11:44:40.286Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "6f697045-da6d-4a70-98ca-8ebb02a03bc0",
+            "name": "ConditionalMockTest",
+            "containerId": "",
+            "created": "2023-11-17T09:42:58.576Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "c67311a7-6d71-4c49-affa-2967b16939a7",
+            "name": "StateFulMockTest",
+            "containerId": "",
+            "created": "2023-11-17T09:43:22.309Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "9f9acdec-5610-44b0-a7d8-e5b67919856c",
+            "name": "ErrorSimulationTest",
+            "containerId": "",
+            "created": "2023-11-17T09:43:39.249Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "d30d87a4-acc2-4e2a-b82e-fae201903822",
+            "name": "End2EndMockTest",
+            "containerId": "",
+            "created": "2023-11-17T09:44:00.965Z",
+            "sortNum": 80000
+        },
+        {
+            "_id": "61f2b1a8-2aed-4cf7-bfb5-67c413fc2d97",
+            "name": "WebhookMockTest",
+            "containerId": "",
+            "created": "2023-11-23T14:52:30.786Z",
+            "sortNum": 90000
+        },
+        {
+            "_id": "a2492ff1-bcbc-4254-b9c1-ff1f60a07ad3",
+            "name": "ProxyMockTest",
+            "containerId": "",
+            "created": "2023-11-24T05:50:02.125Z",
+            "sortNum": 100000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "31c146f5-0161-4bbb-af2e-e4b3dfb05ece",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "4d7cb900-f43e-48ed-8687-53c27cc9baff",
+            "name": "getStaticUserData",
+            "url": "http://localhost:8080/api/getStaticData",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-16T11:43:12.413Z",
+            "modified": "2023-11-20T11:27:15.883Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dba0c89b-d876-46e3-9556-e4e8082cb1c4",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "6f697045-da6d-4a70-98ca-8ebb02a03bc0",
+            "name": "createOrder",
+            "url": "http://localhost:8080/api/orders",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-16T12:11:56.233Z",
+            "modified": "2023-11-25T05:55:24.960Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"items\": [{\"name\": \"Product A\", \"quantity\": 9}]}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "beae426e-b35a-4321-92d9-4eda0043f2bd",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "1d35bbfe-97ee-4c2f-873f-808fcf70d191",
+            "name": "getSearchResult",
+            "url": "http://localhost:8080/api/search?query=pooja",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-16T11:44:57.956Z",
+            "modified": "2023-11-25T05:48:42.929Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "query",
+                    "value": "pooja",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "19559e60-3135-4487-aa6b-4adfa2dc1872",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "1d35bbfe-97ee-4c2f-873f-808fcf70d191",
+            "name": "getUser",
+            "url": "http://localhost:8080/api/user",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-16T12:28:25.927Z",
+            "modified": "2023-11-16T12:29:35.006Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "27fa5868-077b-4d2b-8003-6ae22fa1339b",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "c67311a7-6d71-4c49-affa-2967b16939a7",
+            "name": "createProduct",
+            "url": "http://localhost:8080/createProduct",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-17T13:13:36.610Z",
+            "modified": "2023-11-21T06:55:34.282Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8d3d7fc4-ec2b-4eee-afee-5e40b63333ee",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "c67311a7-6d71-4c49-affa-2967b16939a7",
+            "name": "getProduct",
+            "url": "http://localhost:8080/getProduct",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-11-17T13:14:06.616Z",
+            "modified": "2023-11-21T07:02:26.610Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ff0f6b85-f1d6-44be-93bc-b551c12bfe6b",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "c67311a7-6d71-4c49-affa-2967b16939a7",
+            "name": "deleteProduct",
+            "url": "http://localhost:8080/deleteProduct",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-11-21T07:02:46.109Z",
+            "modified": "2023-11-21T07:04:59.820Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "51228a85-2fa3-467f-a107-0e7dd5d52d20",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "9f9acdec-5610-44b0-a7d8-e5b67919856c",
+            "name": "getProductWithAuth",
+            "url": "http://localhost:8080/products/123",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-11-21T07:27:00.418Z",
+            "modified": "2023-11-21T08:18:25.519Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer valid_token"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4bfc1a02-6cc0-404f-ba60-7959e709fbc2",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "9f9acdec-5610-44b0-a7d8-e5b67919856c",
+            "name": "getProductWithoutAuth",
+            "url": "http://localhost:8080/products/123",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-11-21T07:27:03.786Z",
+            "modified": "2023-11-21T08:19:10.272Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer invalid_token"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5d5cf3b3-4eff-4df6-b0b6-de8f0f126c35",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "d30d87a4-acc2-4e2a-b82e-fae201903822",
+            "name": "createUser",
+            "url": "http://localhost:8080/create-user",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-11-21T10:44:35.530Z",
+            "modified": "2023-11-23T07:02:37.167Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"id\": \"{{#guid}}\",\n  \"name\": \"{{#name}}\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.userId",
+                    "action": "setto",
+                    "value": "{{userId, local}}"
+                }
+            ]
+        },
+        {
+            "_id": "65860ae1-6583-45ab-b923-2999ef65aaa0",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "d30d87a4-acc2-4e2a-b82e-fae201903822",
+            "name": "checkout",
+            "url": "http://localhost:8080/checkout-product",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-11-21T12:01:23.134Z",
+            "modified": "2023-11-23T07:23:41.551Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"userId\": \"{{userId}}\" ,\n  \"productId\" : \"{{#number,1,1000}}\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.productId",
+                    "action": "setto",
+                    "value": "{{productId, local}}"
+                },
+                {
+                    "type": "set-env-var",
+                    "custom": "json.price",
+                    "action": "setto",
+                    "value": "{{price, local}}"
+                }
+            ]
+        },
+        {
+            "_id": "5409dee5-2633-40af-9ac0-8f6f4d6768ab",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "d30d87a4-acc2-4e2a-b82e-fae201903822",
+            "name": "orderProduct",
+            "url": "http://localhost:8080/order-product",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-11-21T12:07:20.704Z",
+            "modified": "2023-11-23T08:09:21.390Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"userId\": \"{{userId}}\",\n  \"productId\": \"{{productId}}\",\n  \"price\": \"{{#number}}\",\n  \"orderId\": {{#number}}\n  \n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.orderId",
+                    "action": "setto",
+                    "value": "{{orderId, local}}"
+                },
+                {
+                    "type": "set-env-var",
+                    "custom": "json.orderStatus",
+                    "action": "setto",
+                    "value": "{{orderstatus, local}}"
+                },
+                {
+                    "type": "set-env-var",
+                    "custom": "json.price",
+                    "action": "setto",
+                    "value": "{{price, local}}"
+                }
+            ]
+        },
+        {
+            "_id": "c5e65e58-c531-48db-bfc2-c8f08e078104",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "61f2b1a8-2aed-4cf7-bfb5-67c413fc2d97",
+            "name": "callBack",
+            "url": "http://localhost:8080/originalRequest",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-11-23T14:52:48.195Z",
+            "modified": "2023-11-24T05:24:58.478Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "10ea4086-8906-4838-805e-952428abeebd",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "a2492ff1-bcbc-4254-b9c1-ff1f60a07ad3",
+            "name": "getExternalService",
+            "url": "http://localhost:8080/posts/2",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-11-24T05:50:23.012Z",
+            "modified": "2023-11-25T06:16:49.009Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f24cd5a4-3d9c-41da-bc63-096146ff0b14",
+            "colId": "73f57d6a-6fac-45e7-886b-84635efb72bc",
+            "containerId": "a2492ff1-bcbc-4254-b9c1-ff1f60a07ad3",
+            "name": "interceptExternalService",
+            "url": "http://localhost:8080/external-api/some/path",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2023-11-24T06:37:16.005Z",
+            "modified": "2023-11-24T06:37:52.637Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

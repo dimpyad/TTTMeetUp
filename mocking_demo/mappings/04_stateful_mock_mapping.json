@@ -1,0 +1,54 @@
+{
+    "mappings": [
+      {
+        "scenarioName": "CRUD",
+        "requiredScenarioState": "Started",
+        "request": {
+          "method": "GET",
+          "urlPattern": "/getProduct"
+        },
+        "response": {
+          "status": 200,
+          "jsonBody": {"message" : "No Product Available"}
+        }
+      },
+      {
+        "scenarioName": "CRUD",
+        "requiredScenarioState": "Started",
+        "newScenarioState": "Created",
+        "request": {
+          "method": "POST",
+          "urlPattern": "/createProduct"
+        },
+        "response": {
+          "status": 201,
+          "jsonBody": {"message" : "Product Created successfully"}
+        }
+      },
+      {
+        "scenarioName": "CRUD",
+        "requiredScenarioState": "Created",
+        "request": {
+          "method": "GET",
+          "urlPattern": "/getProduct"
+        },
+        "response": {
+          "status": 200,
+          "jsonBody": {"name": "Product A"}
+        }
+      },
+      {
+        "scenarioName": "CRUD",
+        "requiredScenarioState": "Created",
+        "newScenarioState": "Started",
+        "request": {
+          "method": "DELETE",
+          "urlPattern": "/deleteProduct"
+        },
+        "response": {
+          "status": 204,
+          "jsonBody": {"name": "Product Deleted"}
+        }
+      }
+    ]
+  }

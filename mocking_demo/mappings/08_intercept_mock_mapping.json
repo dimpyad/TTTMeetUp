@@ -1,0 +1,24 @@
+{
+    "mappings": [
+        {
+            "request": {
+              "method": "GET",
+              "urlPattern": "/external-api/.*"
+            },
+            "response": {
+            "proxyBaseUrl": "https://api.example.com"
+            }
+          },
+          {
+            "request": {
+              "method": "GET",
+              "urlPattern": "/external-api/.*"
+            },
+            "response": {
+            "status": 200,
+            "body": "Intercepted Response"
+            }
+          }
+
+    ]
+}

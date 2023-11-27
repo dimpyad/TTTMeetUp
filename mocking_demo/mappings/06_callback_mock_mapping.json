@@ -1,0 +1,24 @@
+{
+    "request": {
+      "method": "POST",
+      "url": "/originalRequest"
+    },
+    "response": {
+      "status": 200,
+      "body": "Response to Original Request"
+    },
+    "serveEventListeners": [
+      {
+        "name": "webhook",
+        "parameters": {
+          "url": "http://localhost:8080/callback",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": "{ \"message\": \"success\", \"originalRequestBody\": \"{{request.body}}\" }"
+        }
+      }
+    ]
+  }
+  

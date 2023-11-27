@@ -1,0 +1,5 @@
+{ 
+    "orderId": "{{jsonPath request.body '$.orderId'}}",
+    "price": "{{jsonPath request.body '$.price'}}",
+    "orderStatus": "Success"
+}

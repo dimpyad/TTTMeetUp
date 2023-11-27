@@ -1,0 +1,58 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/api/orders",
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$.items[?(@.quantity > 5)]"
+          }
+        ]
+      },
+      "response": {
+        "status": 200,
+        "body": "{ \"message\": \"Large Order Placed\" }",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/api/orders",
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$.items[?(@.quantity <= 5 && @.quantity >= 1)]"
+          }
+        ]
+      },
+      "response": {
+        "status": 200,
+        "body": "{ \"message\": \"Small Order Placed\" }",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/api/orders",
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$.items[?(@.quantity <= 0 )]"
+          }
+        ]
+      },
+      "response": {
+        "status": 400,
+        "body": "{ \"message\": \"Invalid Order - Quantity too low\" }",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}

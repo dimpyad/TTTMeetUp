@@ -1,0 +1,10 @@
+{
+    "request": {
+      "method": "GET",
+      "urlPattern": "/posts/.*"
+    },
+    "response": {
+        "proxyBaseUrl": "https://jsonplaceholder.typicode.com"
+    }
+  }
+  

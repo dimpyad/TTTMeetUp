@@ -1,0 +1,6 @@
+{
+    "id": "{{randomValue type='UUID'}}",
+    "name": "{{randomValue length=12 type='ALPHANUMERIC' uppercase=true}}",
+    "startDate" : "{{now}}",
+    "endDate" : "{{now offset='1 years'}}"
+}

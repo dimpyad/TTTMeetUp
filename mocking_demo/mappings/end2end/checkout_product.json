@@ -1,0 +1,17 @@
+{
+    "request": {
+      "method": "POST",
+      "url": "/checkout-product",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$.userId",
+          "matchesJsonPath": "$.productId"
+        }
+      ]
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "checkout_response.json"
+    }
+  }
+  
