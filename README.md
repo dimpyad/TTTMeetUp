@@ -10,7 +10,7 @@ Link to the slides - https://www.slideshare.net/DimpyAdhikary/advanced-api-mocki
 
 mapping folder - Contains wiremock request/rensponse mapping files \
 __files filder - Contains response json files\
-thunder_client_collection - Contains demo collection file to run the mocked end points\
+thunder_client_collection - Contains demo collection file to run the mocked end points
 
 ### How to Run the wiremock Server:
 java -cp "wiremock-state-extension-standalone-<version>.jar:wiremock-standalone-<version>.jar" -jar wiremock-standalone-<version>.jar --global-response-templating
